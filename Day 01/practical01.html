@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 01 | jQuery UI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <style>
+        body {
+            background-color: #4158D0;
+            overflow: none;
+        }
+        .div{
+            width: 150px;
+            height: 150px;
+            background-color: #FFCC70;
+            border: solid white;
+        }
+        .draggable{
+            width: 50%;
+            height: 300px;
+            background-color: #d7d7d7;
+            outline: outset white;
+            border: solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .drop{
+            width: 50%;
+            height: 240px;
+            background-color: white;
+            float: right;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="draggable">
+            <div class="div"></div>
+            <div class="drop"></div>
+        </div>
+    </main>
+
+    <script>
+        $(function(){
+            // $(".draggable").draggable()
+            $(".div").draggable({
+                // delay : 100
+                containment: "parent",
+                cursor : "move"
+            })
+        })
+    </script>
+</body>
+
+</html>
